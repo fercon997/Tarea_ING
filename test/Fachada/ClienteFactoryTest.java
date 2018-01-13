@@ -80,7 +80,7 @@ public class ClienteFactoryTest {
         instance.agregarCliente(nombre, apellido, cedula, fechaUltima, file);
         ClienteFactory after = new ClienteFactory(file);
         try{
-            assertEquals(null, after.buscarPorId(2));
+            assertEquals(null, after.buscarPorCedula(cedula).getId());
         } catch(Exception e){
             fail("El usuario no se agrego correctamente");
         }
@@ -100,8 +100,9 @@ public class ClienteFactoryTest {
         cedula = 22767267;
         try{
             assertEquals(null, instance.buscarPorCedula(cedula));
-        } catch(Exception e)
+        } catch(Exception e) {
             fail("La cedula esta registrada");
+        }
     }
 
     @Test
@@ -110,7 +111,7 @@ public class ClienteFactoryTest {
         int id = 1;
         ClienteFactory instance = new ClienteFactory(System.getProperty("user.dir")+"\\test\\Fachada\\test.json");
         try{
-            assertEquals("Juan", instance.buscarPorId(id).getNombre());
+            assertEquals(id, instance.buscarPorId(id).getId());
         } catch(Exception e){
             fail("El cliente no se encontro");
         }
@@ -118,8 +119,9 @@ public class ClienteFactoryTest {
         id = 7;
         try{
             assertEquals(null, instance.buscarPorId(id));
-        } catch(Exception e)
+        } catch(Exception e){
             fail("La cedula esta registrada");
+        }
     }
     
 }

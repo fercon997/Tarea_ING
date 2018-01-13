@@ -29,7 +29,7 @@ public class ClienteFactory {
         return clientes.buscarCliente(cedula); 
     }
     
-    public void buscarPorId(int id){
+    public Cliente buscarPorId(int id){
         clientes.buscarCliente(id);
     }
 }
