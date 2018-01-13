@@ -5,7 +5,7 @@
  */
 package Fachada;
 
-import Tarea2.ClienteF;
+import Tarea2.*;
 import java.text.ParseException;
 import java.util.Date;
 

@@ -5,11 +5,12 @@
  */
 package Tarea2;
 
+import java.util.Date;
 /**
  *
  * @author Conper
  */
 public interface ClienteF {
     public void agregarCliente(String nombre, String apellido, long cedula, Date fechaUltima, String file);
-    public Cliente buscar(long cedula);
+    public Cliente buscarCliente(long cedula);
 }

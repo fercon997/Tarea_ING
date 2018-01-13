@@ -26,11 +26,11 @@ public class ClienteConcr implements ClienteF {
     }
     
     @Override
-    public Cliente buscar(long cedula){
+    public Cliente buscarCliente(long cedula){
         return clientes.buscarCliente(cedula);
     }
     
-    public Cliente buscar(int id){
+    public Cliente buscarCliente(int id){
         return clientes.buscarCliente(id);
     }
     
